@@ -3,12 +3,8 @@
   "version": "1.0.0",
   "main": "main.js",
   "type": "module",
-  "scripts": {
-    "dev": "vite"
-  },
   "dependencies": {
     "@react-three/postprocessing": "^2.16.2",
-    "node": "^18.20.4",
     "three": "^0.166.1"
   }
 }
