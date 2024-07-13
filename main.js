@@ -10,10 +10,10 @@ function init() {
     document.getElementById('canvas-container').appendChild(renderer.domElement);
 
     const fontLoader = new THREE.FontLoader();
-    fontLoader.load('fonts/Break Brush_Regular.json', function (font) {
+    fontLoader.load('fonts/Gangsta_Regular.json', function (font) {
         const geometry = new THREE.TextGeometry('Kouk', {
             font: font,
-            size: 4,
+            size: 3,
             height: 0.4,
             curveSegments: 12,
             bevelEnabled: true,
