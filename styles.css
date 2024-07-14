@@ -1,14 +1,72 @@
-body,
-html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+body {
     background-color: black;
+    margin: 0;
+    overflow: hidden;
 }
 
 #canvas-container {
-    max-width: 500px;
-    max-height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+@keyframes neonFloat {
+    0% {
+        transform: translateY(-50%);
+    }
+
+    50% {
+        transform: translateY(calc(-50% - 10px));
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+.neon-line {
+    position: absolute;
+    top: 50%;
+    width: 8px;
+    height: 220px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px white, 0 0 40px white, 0 0 60px white, 0 0 80px white;
+    animation: neonFloat 3s ease-in-out infinite;
+}
+
+.neon-line.left {
+    left: 36%;
+}
+
+.neon-line.right {
+    right: 36%;
+}
+
+.neon-line.second {
+    top: 45%;
+    animation: neonFloat 3s ease-in-out infinite 1s;
+}
+
+.neon-line.left.second {
+    left: calc(36% - 40px);
+}
+
+.neon-line.right.second {
+    right: calc(36% - 40px);
+}
+
+.neon-line.third {
+    top: 40%;
+    animation: neonFloat 3s ease-in-out infinite 2s;
+}
+
+.neon-line.left.third {
+    left: calc(36% - 80px);
+}
+
+.neon-line.right.third {
+    right: calc(36% - 80px);
 }
